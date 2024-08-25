@@ -1007,6 +1007,7 @@ from .lego import LEGOIE
 from .lemonde import LemondeIE
 from .lenta import LentaIE
 from .libraryofcongress import LibraryOfCongressIE
+from .librofm import LibroFmIE
 from .libsyn import LibsynIE
 from .lifenews import (
     LifeEmbedIE,

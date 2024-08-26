@@ -63,7 +63,7 @@ class LibroFmIE(InfoExtractor):
         return {
             'formats': [{
                  'url': part['url'],
-                 # 'ext': 'zip',
+                 'ext': 'temp',
                  'format': 'zip archive of mp3 files',
                  # 'acodec': 'mp3',
                  # 'container': 'zip',

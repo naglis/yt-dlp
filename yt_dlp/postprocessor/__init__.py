@@ -3,6 +3,7 @@
 from .common import PostProcessor
 from .embedthumbnail import EmbedThumbnailPP
 from .exec import ExecAfterDownloadPP, ExecPP
+from .extractzip import ExtractZipPP
 from .ffmpeg import (
     FFmpegConcatPP,
     FFmpegCopyStreamPP,

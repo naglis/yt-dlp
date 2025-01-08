@@ -51,7 +51,7 @@ class RuutuIE(InfoExtractor):
                 'age_limit': 0,
                 'upload_date': '20150507',
                 'series': 'Superpesis',
-                'categories': ['Urheilu'],
+                'categories': ['Urheilu', 'Pesäpallo'],
                 'media_type': 'video_clip',
                 'channel_id': '93',
                 'series_id': '1379173',
@@ -137,7 +137,11 @@ class RuutuIE(InfoExtractor):
 
                 formats.append(fmt)
 
-        self._merge_subtitles({lang: [{'url': url}] for lang, url in (media.get('subtitles') or {}).items()}, target=subtitles)
+        self._merge_subtitles({
+            s['language']: [{
+                'name': s.get('name'),
+                'url': s['url'],
+        }] for s in (media.get('subtitles') or [])}, target=subtitles)
 
         return formats, subtitles
 
